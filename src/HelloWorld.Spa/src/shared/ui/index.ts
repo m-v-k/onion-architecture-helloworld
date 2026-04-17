@@ -1,0 +1,5 @@
+export { default as BaseButton } from './atoms/BaseButton.vue'
+export { default as BaseInput } from './atoms/BaseInput.vue'
+export { default as BaseSelect } from './atoms/BaseSelect.vue'
+export { default as BaseTag } from './atoms/BaseTag.vue'
+export { default as BaseDataTable } from './atoms/BaseDataTable.vue'

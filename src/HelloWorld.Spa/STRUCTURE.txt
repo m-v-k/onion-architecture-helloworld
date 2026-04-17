@@ -1,0 +1,42 @@
+src/HelloWorld.Spa/
+├── src/
+│   ├── core/
+│   │   └── api/
+│   │       ├── httpClient.ts          ← Axios instance, base URL /api
+│   │       ├── interceptors.ts        ← Error logging interceptor
+│   │       └── index.ts
+│   ├── shared/
+│   │   ├── ui/
+│   │   │   ├── atoms/
+│   │   │   │   ├── BaseButton.vue     ← PrimeVue Button wrapper
+│   │   │   │   ├── BaseInput.vue      ← PrimeVue InputText wrapper
+│   │   │   │   ├── BaseSelect.vue     ← PrimeVue Select wrapper
+│   │   │   │   ├── BaseTag.vue        ← PrimeVue Tag wrapper
+│   │   │   │   └── BaseDataTable.vue  ← PrimeVue DataTable wrapper
+│   │   │   └── index.ts
+│   │   └── utils/
+│   │       └── languages.ts           ← Supported language codes
+│   ├── features/
+│   │   └── greetings/
+│   │       ├── api/                   ← API layer (never called from components)
+│   │       │   ├── greetingsApi.ts    ← All 6 endpoints
+│   │       │   └── index.ts
+│   │       ├── domain/
+│   │       │   └── validation.ts      ← Business rules (max lengths, required)
+│   │       ├── model/                 ← Server state (Vue Query composables)
+│   │       │   ├── useGreetings.ts    ← Queries + mutations with cache invalidation
+│   │       │   └── index.ts
+│   │       ├── ui/                    ← Vue components
+│   │       │   ├── CreateGreetingForm.vue
+│   │       │   ├── GreetingCard.vue
+│   │       │   ├── GreetingList.vue
+│   │       │   ├── TranslateDialog.vue
+│   │       │   └── GreetingsPage.vue  ← Orchestrator page
+│   │       ├── types.ts
+│   │       └── index.ts
+│   ├── router/
+│   │   └── index.ts
+│   ├── App.vue
+│   ├── main.ts                        ← Pinia + Vue Query + PrimeVue (Aura) + Router
+│   └── style.css                      ← Tailwind v4
+└── vite.config.ts                     ← Tailwind plugin + /api proxy → localhost:5000
