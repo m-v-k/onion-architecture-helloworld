@@ -1,0 +1,71 @@
+@host = http://localhost:5000
+
+### Get all greetings
+GET {{host}}/api/greetings
+
+### Create a casual greeting
+POST {{host}}/api/greetings
+Content-Type: application/json
+
+{
+  "target": "World",
+  "message": "Hello",
+  "language": "en",
+  "isFormal": false
+}
+
+### Create a formal greeting
+POST {{host}}/api/greetings
+Content-Type: application/json
+
+{
+  "target": "Professor",
+  "message": "Good morning",
+  "language": "en",
+  "isFormal": true
+}
+@greetingId = 70c4d1c6-c1b6-4f7b-8e12-b635cf6003e0
+
+### Get greeting by ID (paste an ID from the responses above)
+GET {{host}}/api/greetings/{{greetingId}}
+
+### Make a greeting formal
+PUT {{host}}/api/greetings/{{greetingId}}/formalize
+
+### Make a greeting casual
+PUT {{host}}/api/greetings/{{greetingId}}/casualize
+
+### Translate a greeting to Dutch
+POST {{host}}/api/greetings/{{greetingId}}/translate
+Content-Type: application/json
+
+{
+  "targetLanguage": "nl"
+}
+
+### Translate a greeting to French
+POST {{host}}/api/greetings/{{greetingId}}/translate
+Content-Type: application/json
+
+{
+  "targetLanguage": "fr"
+}
+
+### Translate a greeting to Spanish
+POST {{host}}/api/greetings/{{greetingId}}/translate
+Content-Type: application/json
+
+{
+  "targetLanguage": "es"
+}
+
+### Translate a greeting to German
+POST {{host}}/api/greetings/{{greetingId}}/translate
+Content-Type: application/json
+
+{
+  "targetLanguage": "de"
+}
+
+### OpenAPI document
+GET {{host}}/openapi/v1.json

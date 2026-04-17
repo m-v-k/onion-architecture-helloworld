@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/HelloWorld.Application/HelloWorld.Application.csproj" />
+    <Project Path="src/HelloWorld.DataAccess/HelloWorld.DataAccess.csproj" />
+    <Project Path="src/HelloWorld.Main/HelloWorld.Main.csproj" />
+    <Project Path="src/HelloWorld.Models/HelloWorld.Models.csproj" />
+    <Project Path="src/HelloWorld.Service/HelloWorld.Service.csproj" />
+  </Folder>
+</Solution>
