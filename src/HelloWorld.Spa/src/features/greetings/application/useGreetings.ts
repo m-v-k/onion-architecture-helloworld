@@ -6,8 +6,8 @@ import {
   formalizeGreeting,
   casualizeGreeting,
   translateGreeting,
-} from '../api'
-import type { CreateGreetingRequest, TranslateGreetingRequest } from '../types'
+} from '../data-access'
+import type { CreateGreetingRequest, TranslateGreetingRequest } from './index'
 import type { Ref } from 'vue'
 
 const GREETINGS_KEY = ['greetings'] as const

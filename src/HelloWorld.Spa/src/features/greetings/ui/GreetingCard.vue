@@ -51,7 +51,7 @@
 import { computed } from 'vue'
 import Card from 'primevue/card'
 import { BaseButton, BaseTag } from '@/shared/ui'
-import type { GreetingResponse } from '../types'
+import type { GreetingResponse } from '../model/types'
 
 const props = defineProps<{
   greeting: GreetingResponse

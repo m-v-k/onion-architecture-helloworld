@@ -7,6 +7,17 @@ using HelloWorld.Models.Translations;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// CORS – allow the SPA origin on Cloud Run (and localhost for dev)
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
 // Add controllers from the Service layer assembly
 builder.Services.AddControllers()
     .AddApplicationPart(typeof(HelloWorld.Service.Controllers.GreetingsController).Assembly);
@@ -34,6 +45,8 @@ if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
+
+app.UseCors();
 
 app.MapControllers();
 

@@ -3,7 +3,7 @@ import type {
   GreetingResponse,
   CreateGreetingRequest,
   TranslateGreetingRequest,
-} from '../types'
+} from '../model/types'
 
 const BASE = '/greetings'
 

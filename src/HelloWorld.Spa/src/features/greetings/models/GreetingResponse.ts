@@ -9,14 +9,3 @@ export interface GreetingResponse {
   formattedGreeting: string
   createdAt: string
 }
-
-export interface CreateGreetingRequest {
-  target: string
-  message: string
-  language: LanguageCode
-  isFormal: boolean
-}
-
-export interface TranslateGreetingRequest {
-  targetLanguage: LanguageCode
-}
