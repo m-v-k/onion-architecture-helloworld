@@ -48,8 +48,8 @@ import { reactive, ref } from 'vue'
 import Checkbox from 'primevue/checkbox'
 import { BaseButton, BaseInput, BaseSelect } from '@/shared/ui'
 import { SUPPORTED_LANGUAGES } from '@/shared/utils/languages'
-import type { CreateGreetingRequest } from '../model/types'
-import { validateCreateGreeting } from '../domain/validation'
+import type { CreateGreetingRequest } from '../models'
+import { validateCreateGreeting } from '../models'
 
 const emit = defineEmits<{
   submit: [request: CreateGreetingRequest]

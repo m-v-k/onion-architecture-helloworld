@@ -26,7 +26,7 @@
 <script setup lang="ts">
 import ProgressSpinner from 'primevue/progressspinner'
 import GreetingCard from './GreetingCard.vue'
-import type { GreetingResponse } from '../model/types'
+import type { GreetingResponse } from '../models'
 
 defineProps<{
   greetings: GreetingResponse[] | undefined

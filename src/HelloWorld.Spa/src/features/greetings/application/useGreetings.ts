@@ -7,7 +7,7 @@ import {
   casualizeGreeting,
   translateGreeting,
 } from '../data-access'
-import type { CreateGreetingRequest, TranslateGreetingRequest } from './index'
+import type { CreateGreetingRequest, TranslateGreetingRequest } from '../models'
 import type { Ref } from 'vue'
 
 const GREETINGS_KEY = ['greetings'] as const

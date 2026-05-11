@@ -45,8 +45,8 @@ import {
   useFormalizeGreetingMutation,
   useCasualizeGreetingMutation,
   useTranslateGreetingMutation,
-} from '../model'
-import type { CreateGreetingRequest } from '../model/types'
+} from '../application'
+import type { CreateGreetingRequest } from '../models'
 import type { LanguageCode } from '@/shared/utils/languages'
 
 const greetingsQuery = useGreetingsQuery()

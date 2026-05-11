@@ -1,4 +1,4 @@
-import type { CreateGreetingRequest } from '../model/types'
+import type { CreateGreetingRequest } from '.'
 
 const MAX_TARGET_LENGTH = 100
 const MAX_MESSAGE_LENGTH = 250
